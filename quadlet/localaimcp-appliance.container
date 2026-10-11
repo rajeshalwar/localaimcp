@@ -1,0 +1,30 @@
+[Unit]
+Description=localaimcp appliance (systemd + PostgreSQL + MCP server)
+After=network-online.target localaimcp-netint.network localaimcp-netext.network
+Wants=network-online.target
+
+[Container]
+ContainerName=appliance
+Image=localhost/localaimcp_appliance:latest
+
+# Dual-homed on purpose: this is the only container with a route off-box.
+Network=localaimcp-netint.network
+Network=localaimcp-netext.network
+
+PublishPort=127.0.0.1:8000:8000
+Volume=localaimcp-pgdata.volume:/var/lib/pgsql
+
+EnvironmentFile=%h/.config/localaimcp/env
+Environment=POSTGRES_HOST=127.0.0.1
+
+# Podman enables systemd mode automatically for an /sbin/init entrypoint;
+# stated explicitly here because a host unit is where you want no surprises.
+PodmanArgs=--systemd=always
+
+[Service]
+Restart=on-failure
+RestartSec=5
+TimeoutStartSec=180
+
+[Install]
+WantedBy=default.target

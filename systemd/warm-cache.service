@@ -1,0 +1,10 @@
+[Unit]
+Description=Re-warm the PVWatts cache for the seeded demo addresses
+
+[Service]
+Type=oneshot
+EnvironmentFile=-/run/container.env
+Environment=PYTHONPATH=/app/src
+WorkingDirectory=/app
+ExecStart=/usr/bin/python3 -m scripts.warm_cache
+StandardOutput=journal+console

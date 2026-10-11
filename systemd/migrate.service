@@ -1,0 +1,19 @@
+[Unit]
+Description=Apply database migrations
+After=pg-bootstrap.service
+Requires=pg-bootstrap.service
+Before=mcp-solar.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+EnvironmentFile=-/run/container.env
+Environment=PYTHONPATH=/app/src
+Environment=MIGRATIONS_DIR=/app/db/migrations
+WorkingDirectory=/app
+ExecStart=/usr/bin/python3 -c "import asyncio; from mcp_solar import db; print(asyncio.run(db.migrate()))"
+StandardOutput=journal+console
+StandardError=journal+console
+
+[Install]
+WantedBy=multi-user.target

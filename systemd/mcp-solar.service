@@ -1,0 +1,19 @@
+[Unit]
+Description=Solar MCP server (Streamable HTTP)
+After=migrate.service
+Requires=migrate.service
+
+[Service]
+EnvironmentFile=-/run/container.env
+Environment=PYTHONPATH=/app/src
+Environment=MIGRATIONS_DIR=/app/db/migrations
+WorkingDirectory=/app
+ExecStart=/usr/bin/python3 -m mcp_solar.server --http --skip-migrate
+Restart=on-failure
+RestartSec=2
+# Without this, unit output goes only to journald and `podman logs` is empty.
+StandardOutput=journal+console
+StandardError=journal+console
+
+[Install]
+WantedBy=multi-user.target

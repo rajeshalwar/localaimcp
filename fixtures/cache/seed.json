@@ -1,0 +1,609 @@
+{
+  "geocode": {
+    "100 AUDITORIUM CIRCLE SAN ANTONIO TX 78205": {
+      "city": "SAN ANTONIO",
+      "county": "Bexar County",
+      "lat": 29.430089597316,
+      "lon": -98.488559453923,
+      "matched_address": "100 AUDITORIUM CIR, SAN ANTONIO, TX, 78205",
+      "state": "TX",
+      "zip": "78205"
+    },
+    "1001 BISSONNET ST HOUSTON TX 77005": {
+      "city": "HOUSTON",
+      "county": "Harris County",
+      "lat": 29.726082515015,
+      "lon": -95.392849970379,
+      "matched_address": "1001 BISSONNET ST, HOUSTON, TX, 77005",
+      "state": "TX",
+      "zip": "77005"
+    },
+    "1100 CONGRESS AVE AUSTIN TX 78701": {
+      "city": "AUSTIN",
+      "county": "Travis County",
+      "lat": 30.276444701663,
+      "lon": -97.739752095692,
+      "matched_address": "1100 CONGRESS AVE, AUSTIN, TX, 78701",
+      "state": "TX",
+      "zip": "78701"
+    },
+    "1717 N HARWOOD ST DALLAS TX 75201": {
+      "city": "DALLAS",
+      "county": "Dallas County",
+      "lat": 32.787042129392,
+      "lon": -96.799485826437,
+      "matched_address": "1717 N HARWOOD ST, DALLAS, TX, 75201",
+      "state": "TX",
+      "zip": "75201"
+    },
+    "1801 CONGRESS AVE AUSTIN TX 78701": {
+      "city": "AUSTIN",
+      "county": "Travis County",
+      "lat": 30.279694267551,
+      "lon": -97.738414595855,
+      "matched_address": "1801 CONGRESS AVE, AUSTIN, TX, 78701",
+      "state": "TX",
+      "zip": "78701"
+    },
+    "1900 N CHAPARRAL ST CORPUS CHRISTI TX 78401": {
+      "city": "CORPUS CHRISTI",
+      "county": "Nueces County",
+      "lat": 27.809150809012,
+      "lon": -97.395725507648,
+      "matched_address": "1900 N CHAPARRAL ST, CORPUS CHRISTI, TX, 78401",
+      "state": "TX",
+      "zip": "78401"
+    },
+    "2500 BROADWAY LUBBOCK TX 79409": {
+      "city": "LUBBOCK",
+      "county": "Lubbock County",
+      "lat": 33.584501186442,
+      "lon": -101.869507612751,
+      "matched_address": "2500 BROADWAY ST, LUBBOCK, TX, 79401",
+      "state": "TX",
+      "zip": "79401"
+    },
+    "300 ALAMO PLAZA SAN ANTONIO TX 78205": {
+      "city": "SAN ANTONIO",
+      "county": "Bexar County",
+      "lat": 29.425848942659,
+      "lon": -98.486842805931,
+      "matched_address": "300 ALAMO PLZ, SAN ANTONIO, TX, 78205",
+      "state": "TX",
+      "zip": "78205"
+    },
+    "3600 ROSS AVE DALLAS TX 75204": {
+      "city": "DALLAS",
+      "county": "Dallas County",
+      "lat": 32.796831168127,
+      "lon": -96.787340582898,
+      "matched_address": "3600 ROSS AVE, DALLAS, TX, 75204",
+      "state": "TX",
+      "zip": "75204"
+    },
+    "500 W SAN ANTONIO AVE EL PASO TX 79901": {
+      "city": "EL PASO",
+      "county": "El Paso County",
+      "lat": 31.756419323631,
+      "lon": -106.493132211521,
+      "matched_address": "500 W SAN ANTONIO AVE, EL PASO, TX, 79901",
+      "state": "TX",
+      "zip": "79901"
+    },
+    "601 S BUCHANAN ST AMARILLO TX 79101": {
+      "city": "AMARILLO",
+      "county": "Potter County",
+      "lat": 35.206893319969,
+      "lon": -101.831936119737,
+      "matched_address": "601 S BUCHANAN ST, AMARILLO, TX, 79101",
+      "state": "TX",
+      "zip": "79101"
+    }
+  },
+  "pvwatts": {
+    "0f06ab4172c416a8224d7a3fb71cc4135d172bfb90d279c31cc764d8cc8fadae": {
+      "lat_r": 31.756,
+      "lon_r": -106.493,
+      "params": {
+        "array_type": 1,
+        "azimuth": 180.0,
+        "lat": 31.756,
+        "lon": -106.493,
+        "losses": 14.0,
+        "module_type": 0,
+        "system_capacity": 7.0,
+        "tilt": 31.76,
+        "timeframe": "monthly"
+      },
+      "response": {
+        "ac_annual_kwh": 13043.8,
+        "ac_monthly_kwh": [
+          1123.0,
+          974.4,
+          1186.7,
+          1180.7,
+          1207.7,
+          1084.3,
+          1026.7,
+          1074.1,
+          1104.3,
+          1092.4,
+          1022.1,
+          967.5
+        ],
+        "array_type": "fixed roof mount",
+        "azimuth": 180.0,
+        "capacity_factor": 21.27,
+        "lat_sent": 31.756,
+        "lon_sent": -106.493,
+        "solrad_annual": 6.764,
+        "system_capacity_kw": 7.0,
+        "tilt": 31.76,
+        "weather_distance_m": 1693,
+        "weather_station": "64726"
+      }
+    },
+    "1571a41752d6db0d441c611663d4be4422ab0091856d0c0cbdf9672ea0300050": {
+      "lat_r": 27.809,
+      "lon_r": -97.396,
+      "params": {
+        "array_type": 1,
+        "azimuth": 180.0,
+        "lat": 27.809,
+        "lon": -97.396,
+        "losses": 14.0,
+        "module_type": 0,
+        "system_capacity": 7.0,
+        "tilt": 27.81,
+        "timeframe": "monthly"
+      },
+      "response": {
+        "ac_annual_kwh": 10656.9,
+        "ac_monthly_kwh": [
+          712.2,
+          753.1,
+          939.7,
+          894.2,
+          965.8,
+          980.4,
+          1018.0,
+          1045.7,
+          908.5,
+          944.8,
+          772.7,
+          721.8
+        ],
+        "array_type": "fixed roof mount",
+        "azimuth": 180.0,
+        "capacity_factor": 17.38,
+        "lat_sent": 27.809,
+        "lon_sent": -97.396,
+        "solrad_annual": 5.51,
+        "system_capacity_kw": 7.0,
+        "tilt": 27.81,
+        "weather_distance_m": 1587,
+        "weather_station": "687550"
+      }
+    },
+    "1e39abda985e9ba6bffd8eb8d87da075ce5485a41a919de58f14215c51037f4b": {
+      "lat_r": 30.28,
+      "lon_r": -97.738,
+      "params": {
+        "array_type": 1,
+        "azimuth": 180.0,
+        "lat": 30.28,
+        "lon": -97.738,
+        "losses": 14.0,
+        "module_type": 0,
+        "system_capacity": 7.0,
+        "tilt": 30.28,
+        "timeframe": "monthly"
+      },
+      "response": {
+        "ac_annual_kwh": 10433.8,
+        "ac_monthly_kwh": [
+          773.2,
+          691.3,
+          846.2,
+          925.6,
+          920.3,
+          917.2,
+          992.9,
+          1041.2,
+          922.7,
+          900.9,
+          738.2,
+          764.1
+        ],
+        "array_type": "fixed roof mount",
+        "azimuth": 180.0,
+        "capacity_factor": 17.02,
+        "lat_sent": 30.28,
+        "lon_sent": -97.738,
+        "solrad_annual": 5.415,
+        "system_capacity_kw": 7.0,
+        "tilt": 30.28,
+        "weather_distance_m": 1126,
+        "weather_station": "677404"
+      }
+    },
+    "65789f0a2ff7115f2508bb5e264b3d3792ae73b5bdd990cb3ab0537f4a8c51b3": {
+      "lat_r": 29.426,
+      "lon_r": -98.487,
+      "params": {
+        "array_type": 1,
+        "azimuth": 180.0,
+        "lat": 29.426,
+        "lon": -98.487,
+        "losses": 14.0,
+        "module_type": 0,
+        "system_capacity": 7.0,
+        "tilt": 29.43,
+        "timeframe": "monthly"
+      },
+      "response": {
+        "ac_annual_kwh": 10535.6,
+        "ac_monthly_kwh": [
+          778.2,
+          699.3,
+          870.6,
+          871.0,
+          944.3,
+          922.8,
+          1005.5,
+          1025.7,
+          922.2,
+          909.3,
+          848.3,
+          738.4
+        ],
+        "array_type": "fixed roof mount",
+        "azimuth": 180.0,
+        "capacity_factor": 17.18,
+        "lat_sent": 29.426,
+        "lon_sent": -98.487,
+        "solrad_annual": 5.489,
+        "system_capacity_kw": 7.0,
+        "tilt": 29.43,
+        "weather_distance_m": 2176,
+        "weather_station": "657124"
+      }
+    },
+    "6dec605eda488644a8c2615fc68834f99841d2671c933aafb5d92ec27f387a3d": {
+      "lat_r": 29.726,
+      "lon_r": -95.393,
+      "params": {
+        "array_type": 1,
+        "azimuth": 180.0,
+        "lat": 29.726,
+        "lon": -95.393,
+        "losses": 14.0,
+        "module_type": 0,
+        "system_capacity": 7.0,
+        "tilt": 29.73,
+        "timeframe": "monthly"
+      },
+      "response": {
+        "ac_annual_kwh": 9966.5,
+        "ac_monthly_kwh": [
+          745.8,
+          649.5,
+          902.5,
+          845.8,
+          923.4,
+          910.7,
+          917.3,
+          887.6,
+          877.3,
+          882.5,
+          760.6,
+          663.4
+        ],
+        "array_type": "fixed roof mount",
+        "azimuth": 180.0,
+        "capacity_factor": 16.25,
+        "lat_sent": 29.726,
+        "lon_sent": -95.393,
+        "solrad_annual": 5.163,
+        "system_capacity_kw": 7.0,
+        "tilt": 29.73,
+        "weather_distance_m": 1333,
+        "weather_station": "734041"
+      }
+    },
+    "7c366ff89dd1583570207a0642c02587e2328f46c4f842c937e86f0b9769d35c": {
+      "lat_r": 32.797,
+      "lon_r": -96.787,
+      "params": {
+        "array_type": 1,
+        "azimuth": 180.0,
+        "lat": 32.797,
+        "lon": -96.787,
+        "losses": 14.0,
+        "module_type": 0,
+        "system_capacity": 7.0,
+        "tilt": 32.8,
+        "timeframe": "monthly"
+      },
+      "response": {
+        "ac_annual_kwh": 10624.9,
+        "ac_monthly_kwh": [
+          797.9,
+          762.1,
+          878.4,
+          924.8,
+          937.4,
+          980.3,
+          937.8,
+          970.7,
+          984.2,
+          896.0,
+          788.6,
+          766.8
+        ],
+        "array_type": "fixed roof mount",
+        "azimuth": 180.0,
+        "capacity_factor": 17.33,
+        "lat_sent": 32.797,
+        "lon_sent": -96.787,
+        "solrad_annual": 5.462,
+        "system_capacity_kw": 7.0,
+        "tilt": 32.8,
+        "weather_distance_m": 1590,
+        "weather_station": "702965"
+      }
+    },
+    "8b995c736a6082d7725897b82e44ca669a1254e303af479444226c0a2323d8bb": {
+      "lat_r": 30.276,
+      "lon_r": -97.74,
+      "params": {
+        "array_type": 1,
+        "azimuth": 180.0,
+        "lat": 30.276,
+        "lon": -97.74,
+        "losses": 14.0,
+        "module_type": 0,
+        "system_capacity": 7.0,
+        "tilt": 30.28,
+        "timeframe": "monthly"
+      },
+      "response": {
+        "ac_annual_kwh": 10433.8,
+        "ac_monthly_kwh": [
+          773.2,
+          691.3,
+          846.2,
+          925.6,
+          920.3,
+          917.2,
+          992.9,
+          1041.2,
+          922.7,
+          900.9,
+          738.2,
+          764.1
+        ],
+        "array_type": "fixed roof mount",
+        "azimuth": 180.0,
+        "capacity_factor": 17.02,
+        "lat_sent": 30.276,
+        "lon_sent": -97.74,
+        "solrad_annual": 5.415,
+        "system_capacity_kw": 7.0,
+        "tilt": 30.28,
+        "weather_distance_m": 1554,
+        "weather_station": "677404"
+      }
+    },
+    "91400de4620a9cfe857e343de90f0edd3787137c6e15f5ec2dedf1de95dc118a": {
+      "lat_r": 32.787,
+      "lon_r": -96.799,
+      "params": {
+        "array_type": 1,
+        "azimuth": 180.0,
+        "lat": 32.787,
+        "lon": -96.799,
+        "losses": 14.0,
+        "module_type": 0,
+        "system_capacity": 7.0,
+        "tilt": 32.79,
+        "timeframe": "monthly"
+      },
+      "response": {
+        "ac_annual_kwh": 10667.8,
+        "ac_monthly_kwh": [
+          789.2,
+          744.3,
+          881.6,
+          909.9,
+          937.3,
+          976.8,
+          1011.3,
+          1015.9,
+          969.7,
+          884.4,
+          763.0,
+          784.4
+        ],
+        "array_type": "fixed roof mount",
+        "azimuth": 180.0,
+        "capacity_factor": 17.4,
+        "lat_sent": 32.787,
+        "lon_sent": -96.799,
+        "solrad_annual": 5.502,
+        "system_capacity_kw": 7.0,
+        "tilt": 32.79,
+        "weather_distance_m": 2593,
+        "weather_station": "702381"
+      }
+    },
+    "a26572288eec623a06598110e92889504901434e06875cbd7e0f54796c7e0662": {
+      "lat_r": 29.43,
+      "lon_r": -98.489,
+      "params": {
+        "array_type": 1,
+        "azimuth": 180.0,
+        "lat": 29.43,
+        "lon": -98.489,
+        "losses": 14.0,
+        "module_type": 0,
+        "system_capacity": 7.0,
+        "tilt": 29.43,
+        "timeframe": "monthly"
+      },
+      "response": {
+        "ac_annual_kwh": 10591.9,
+        "ac_monthly_kwh": [
+          769.4,
+          696.2,
+          852.1,
+          884.2,
+          921.5,
+          923.7,
+          1000.7,
+          1040.8,
+          937.1,
+          914.8,
+          883.6,
+          767.8
+        ],
+        "array_type": "fixed roof mount",
+        "azimuth": 180.0,
+        "capacity_factor": 17.27,
+        "lat_sent": 29.43,
+        "lon_sent": -98.489,
+        "solrad_annual": 5.507,
+        "system_capacity_kw": 7.0,
+        "tilt": 29.43,
+        "weather_distance_m": 2460,
+        "weather_station": "657311"
+      }
+    },
+    "a657b39bfc38238a55ba4aa45904c300116bffa9bbdf45217daf4758b88c6f20": {
+      "lat_r": 35.207,
+      "lon_r": -101.832,
+      "params": {
+        "array_type": 1,
+        "azimuth": 180.0,
+        "lat": 35.207,
+        "lon": -101.832,
+        "losses": 14.0,
+        "module_type": 0,
+        "system_capacity": 7.0,
+        "tilt": 35.21,
+        "timeframe": "monthly"
+      },
+      "response": {
+        "ac_annual_kwh": 12337.1,
+        "ac_monthly_kwh": [
+          995.2,
+          873.5,
+          1140.1,
+          1101.3,
+          1119.4,
+          1050.6,
+          1079.4,
+          1079.1,
+          1003.5,
+          1032.1,
+          954.8,
+          908.0
+        ],
+        "array_type": "fixed roof mount",
+        "azimuth": 180.0,
+        "capacity_factor": 20.12,
+        "lat_sent": 35.207,
+        "lon_sent": -101.832,
+        "solrad_annual": 6.285,
+        "system_capacity_kw": 7.0,
+        "tilt": 35.21,
+        "weather_distance_m": 1134,
+        "weather_station": "567437"
+      }
+    },
+    "bec3d6093479791c55ab6aa85418d7dde7c5f82d7a1e394efd4b54adb99d4ed4": {
+      "lat_r": 33.585,
+      "lon_r": -101.87,
+      "params": {
+        "array_type": 1,
+        "azimuth": 180.0,
+        "lat": 33.585,
+        "lon": -101.87,
+        "losses": 14.0,
+        "module_type": 0,
+        "system_capacity": 7.0,
+        "tilt": 33.59,
+        "timeframe": "monthly"
+      },
+      "response": {
+        "ac_annual_kwh": 12444.8,
+        "ac_monthly_kwh": [
+          986.8,
+          959.6,
+          1151.6,
+          1091.6,
+          1112.9,
+          1069.7,
+          1060.3,
+          1063.4,
+          1029.9,
+          1120.0,
+          939.4,
+          859.5
+        ],
+        "array_type": "fixed roof mount",
+        "azimuth": 180.0,
+        "capacity_factor": 20.29,
+        "lat_sent": 33.585,
+        "lon_sent": -101.87,
+        "solrad_annual": 6.376,
+        "system_capacity_kw": 7.0,
+        "tilt": 33.59,
+        "weather_distance_m": 1912,
+        "weather_station": "565910"
+      }
+    },
+    "d4f53c46f14a03ba4cb8e64de756ef0b2399efea229ffdc1903ec8c1774dfed9": {
+      "lat_r": 30.276,
+      "lon_r": -97.74,
+      "params": {
+        "array_type": 1,
+        "azimuth": 235.0,
+        "lat": 30.276,
+        "lon": -97.74,
+        "losses": 14.0,
+        "module_type": 0,
+        "system_capacity": 7.0,
+        "tilt": 30.0,
+        "timeframe": "monthly"
+      },
+      "response": {
+        "ac_annual_kwh": 9949.4,
+        "ac_monthly_kwh": [
+          671.0,
+          636.0,
+          786.9,
+          923.6,
+          957.6,
+          971.6,
+          1033.9,
+          1013.7,
+          866.5,
+          824.9,
+          631.4,
+          632.1
+        ],
+        "array_type": "fixed roof mount",
+        "azimuth": 235.0,
+        "capacity_factor": 16.23,
+        "lat_sent": 30.276,
+        "lon_sent": -97.74,
+        "solrad_annual": 5.187,
+        "system_capacity_kw": 7.0,
+        "tilt": 30.0,
+        "weather_distance_m": 1554,
+        "weather_station": "677404"
+      }
+    }
+  }
+}

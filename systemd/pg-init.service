@@ -1,0 +1,28 @@
+[Unit]
+Description=Initialise the PostgreSQL cluster on first boot
+After=container-env.service
+Requires=container-env.service
+Before=postgresql.service
+# Only on a genuinely empty data directory -- a mounted volume with an existing
+# cluster must never be re-initialised.
+ConditionPathExists=!/var/lib/pgsql/data/PG_VERSION
+
+# NOTE: we call initdb directly rather than `postgresql-setup --initdb`.
+# postgresql-setup asks systemd for PGDATA over D-Bus, and there is no D-Bus in
+# this container, so it fails with "no db datadir (PGDATA) configured".
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+User=postgres
+Group=postgres
+Environment=PGDATA=/var/lib/pgsql/data
+# Without --auth-*, initdb writes `trust` for every line, and an appended
+# scram-sha-256 line is never reached (pg_hba is first-match). Local socket =
+# peer (only the postgres OS user, for pg-bootstrap); TCP = password.
+ExecStart=/usr/bin/initdb -D /var/lib/pgsql/data --encoding=UTF8 --locale=C.UTF-8 -U postgres --auth-local=peer --auth-host=scram-sha-256
+ExecStartPost=/bin/sh -c "echo \"listen_addresses = '127.0.0.1'\" >> /var/lib/pgsql/data/postgresql.conf"
+StandardOutput=journal+console
+StandardError=journal+console
+
+[Install]
+WantedBy=multi-user.target

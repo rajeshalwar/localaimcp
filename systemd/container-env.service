@@ -1,0 +1,18 @@
+[Unit]
+Description=Export the container's environment to systemd services
+DefaultDependencies=no
+After=local-fs.target
+Before=basic.target
+
+# When systemd is PID 1, variables passed by `podman run -e` / compose land in
+# PID 1's environment and are NOT inherited by the services systemd starts.
+# This snapshots them into a file the other units read via EnvironmentFile.
+# 0600: it holds NREL_API_KEY. systemd reads EnvironmentFile as root before
+# dropping to User=, so units running as postgres still get their variables.
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/sh -c 'tr "\\0" "\\n" < /proc/1/environ | grep -E "^[A-Z_][A-Z0-9_]*=" > /run/container.env; chmod 0600 /run/container.env'
+
+[Install]
+WantedBy=basic.target

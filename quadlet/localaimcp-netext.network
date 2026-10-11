@@ -1,0 +1,5 @@
+[Unit]
+Description=localaimcp egress network (appliance only)
+
+[Network]
+NetworkName=localaimcp_netext

@@ -1,0 +1,15 @@
+[Unit]
+Description=Create the application role and database
+After=postgresql.service
+Requires=postgresql.service
+Before=migrate.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+EnvironmentFile=-/run/container.env
+User=postgres
+ExecStart=/usr/local/bin/pg-bootstrap.sh
+
+[Install]
+WantedBy=multi-user.target

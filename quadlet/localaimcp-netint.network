@@ -1,0 +1,8 @@
+[Unit]
+Description=localaimcp internal network (no route off-box)
+
+[Network]
+NetworkName=localaimcp_netint
+# The load-bearing line. Containers on this network reach each other and
+# resolve each other by name, but have no gateway to the internet.
+Internal=true

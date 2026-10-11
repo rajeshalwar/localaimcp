@@ -1,0 +1,23 @@
+#!/bin/sh
+# Guard rails for a public repo about privacy.
+#   1. never commit .env
+#   2. never commit an egress log dump
+#   3. never commit a fixture location that is not on the public-landmark
+#      allowlist (addresses AND coordinates; see scripts/allowlist.py)
+fail=0
+
+if git diff --cached --name-only | grep -qx '.env'; then
+  echo "pre-commit: refusing to commit .env"; fail=1
+fi
+
+if git diff --cached --name-only | grep -qE '(egress.*\.json|\.egress\.log)$'; then
+  echo "pre-commit: refusing to commit an egress log dump"; fail=1
+fi
+
+fixtures=$(git diff --cached --name-only --diff-filter=ACM | grep -E '^fixtures/cache/.*\.json$' || true)
+if [ -n "$fixtures" ]; then
+  # shellcheck disable=SC2086
+  python3 scripts/allowlist.py $fixtures || fail=1
+fi
+
+exit $fail

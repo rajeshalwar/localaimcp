@@ -1,0 +1,15 @@
+[Unit]
+Description=Periodically re-warm the solar cache
+
+# MASKED IN THE IMAGE (containers/appliance.Containerfile). This timer makes
+# outbound requests; if it fires during the talk it silently adds rows to
+# egress_log right after we claim exactly two requests left the machine.
+# `make demo` warns unless it is masked. To demonstrate timers:
+#   podman exec appliance sh -c "systemctl unmask warm-cache.timer && systemctl enable --now warm-cache.timer"
+[Timer]
+OnBootSec=15min
+OnUnitActiveSec=12h
+Persistent=true
+
+[Install]
+WantedBy=timers.target

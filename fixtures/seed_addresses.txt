@@ -1,0 +1,16 @@
+# Public landmarks and civic addresses only. Never add a private residence:
+# this file ships in a public repo, and this is a talk about not leaking data.
+# Enforced by scripts/pre-commit.
+#
+# All verified to resolve against the US Census geocoder.
+1100 Congress Ave, Austin, TX 78701
+1801 Congress Ave, Austin, TX 78701
+1001 Bissonnet St, Houston, TX 77005
+1717 N Harwood St, Dallas, TX 75201
+3600 Ross Ave, Dallas, TX 75204
+300 Alamo Plaza, San Antonio, TX 78205
+100 Auditorium Circle, San Antonio, TX 78205
+500 W San Antonio Ave, El Paso, TX 79901
+2500 Broadway, Lubbock, TX 79409
+1900 N Chaparral St, Corpus Christi, TX 78401
+601 S Buchanan St, Amarillo, TX 79101
