@@ -36,7 +36,7 @@ containers.
 ## Quick start
 
 ```bash
-cp .env.example .env         # then paste your NREL key into it
+cp .env.example .env         # then paste your NLR key into it
 make doctor                  # checks podman, cgroups, memory, disk
 make setup                   # builds images, pulls the model (~4.7 GB, once)
 make up                      # starts the stack
