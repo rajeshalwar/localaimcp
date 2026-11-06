@@ -58,6 +58,77 @@ netext (bridge)  ──┘    migrate.service    (oneshot, before the server)
 The appliance is the only container attached to both networks, so it is the
 only possible egress path. That is enforced by the kernel, not by our code.
 
+### One question, end to end
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor U as You
+    box netint (no route off-box)
+        participant A as agent
+        participant O as ollama
+    end
+    box appliance (netint + netext)
+        participant M as mcp-solar
+        participant P as PostgreSQL
+    end
+    box Internet
+        participant C as US Census geocoder
+        participant N as NREL PVWatts
+    end
+
+    A->>M: list_tools (Streamable HTTP, :8000/mcp)
+    M-->>A: tools allowed by TOOL_PROFILE
+    Note over A: schema_bridge converts MCP schemas<br/>to Ollama function schemas
+
+    U->>A: "What would solar look like on the Texas State Capitol?"
+
+    A->>O: /api/chat (messages + tool schemas)
+    O-->>A: tool_call geocode_address(address)
+    Note over A: guard drops rate, cost, tilt, azimuth,<br/>losses the user never typed
+    A->>M: call_tool geocode_address
+    M->>P: geocode_cache lookup
+    alt cache hit
+        P-->>M: cached record
+    else cache miss
+        M->>C: address
+        C-->>M: match, trimmed to lat/lon/county
+        M->>P: geocode_cache put
+    else REPLAY_ONLY=true and no cache
+        Note over M: no request made, return error + hint
+    end
+    M->>P: egress_log row (cache hit or request sent)
+    M-->>A: {matched_address, lat, lon, county, ...}
+
+    A->>O: /api/chat (+ tool result)
+    O-->>A: tool_call estimate_solar_production(lat, lon)
+    A->>M: call_tool estimate_solar_production
+    Note over M: round lat/lon to 3 decimals (~110 m)<br/>before anything leaves
+    M->>P: pvwatts_cache lookup
+    alt cache miss
+        M->>N: rounded lat/lon + system params (api_key)
+        N-->>M: annual and monthly kWh
+        M->>P: pvwatts_cache put
+    end
+    M->>P: egress_log row (api_key redacted)
+    M-->>A: {ac_annual_kwh, capacity_factor, ...}
+
+    A->>O: /api/chat (+ tool result)
+    O-->>A: tool_call estimate_savings(annual_kwh, capacity_kw)
+    A->>M: call_tool estimate_savings
+    Note over M: pure local arithmetic, nothing leaves
+    M-->>A: {annual_savings, simple_payback_years, ...}
+
+    A->>O: /api/chat (+ tool result)
+    O-->>A: plain-English answer, no tool_calls
+    A->>U: answer + trace of every tool call
+```
+
+With `TOOL_PROFILE=composite` the model makes a single `assess_property` call
+instead, and `mcp-solar` runs geocode, production and savings itself and then
+saves the result to the `assessments` table. The agent stops after 6 tool
+rounds if the model never produces a final answer.
+
 ### Prove it yourself
 
 ```bash
